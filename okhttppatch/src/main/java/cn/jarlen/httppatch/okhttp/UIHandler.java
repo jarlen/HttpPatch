@@ -12,7 +12,7 @@ import java.util.concurrent.Executor;
 
 public class UIHandler extends Handler implements Executor{
 
-    private volatile static UIHandler uiHandler = null;
+    private static UIHandler uiHandler = null;
 
     public UIHandler(){
         super(Looper.getMainLooper());

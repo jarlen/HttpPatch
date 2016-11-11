@@ -7,18 +7,18 @@
         android:id="@+id/resultTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="30dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
         android:textColor="@color/colorPrimary"
-        android:textSize="20dp" />
+        android:textSize="12dp" />
 
     <Button
         android:id="@+id/testBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/resultTv"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
         android:text="test"
         android:textColor="@color/colorAccent"
         android:textSize="20dp" />

@@ -60,12 +60,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Callback2 callback2 = new Callback2() {
         @Override
         public void onResponse(Response response) {
+            String string = null;
             try {
-                String string = response.body().string().toString();
-                resultTv.setText(string);
+                string = response.body().string().toString();
             } catch (IOException e) {
                 e.printStackTrace();
             }
+            resultTv.setText(string);
         }
 
         @Override
