@@ -16,16 +16,18 @@
  */
 package cn.jarlen.httppatch.okhttp;
 
-import okhttp3.MediaType;
+import android.os.Looper;
 
 /**
- * DESCRIBE: MediaType.class
- * Created by jarlen on 2016/10/28.
+ * DESCRIBE:thread helper
+ * Created by jarlen on 2016/11/12.
  */
 
-public class ContentType {
+public class ThreadUtil {
 
-    public static final MediaType JSON = MediaType.parse("application/json; chartset=utf-8");
-    public static final MediaType TEXT = MediaType.parse("Content-Type:text/html;charset=utf-8");
-
+    public static boolean isInMainThread() {
+        Looper myLooper = Looper.myLooper();
+        Looper mainLooper = Looper.getMainLooper();
+        return myLooper == mainLooper;
+    }
 }

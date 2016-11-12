@@ -5,15 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-import java.io.IOException;
-
 import cn.jarlen.httppatch.okhttp.Callback2;
 import okhttp3.Call;
 import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
-import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -58,19 +55,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private Callback2 callback2 = new Callback2() {
+
         @Override
-        public void onResponse(Response response) {
-            String string = null;
-            try {
-                string = response.body().string().toString();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+        public void onResponse(String body) {
+            String string = body;
             resultTv.setText(string);
         }
 
         @Override
-        public void onFailure(IOException e) {
+        public void onFailure(Exception e) {
 
         }
     };
