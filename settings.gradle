@@ -1,1 +1,1 @@
-include ':app', ':okhttppatch'
+include ':app', ':okhttp-patch'
